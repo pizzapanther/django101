@@ -1,7 +1,11 @@
 from django.template.response import TemplateResponse
 
 def homepage (request):
-    return TemplateResponse(request, 'index.html', {})
+    context = {
+        'n': 6
+    }
+    
+    return TemplateResponse(request, 'index.html', context)
     
 def page_view (request, template_path):
     return TemplateResponse(request, template_path, {})
