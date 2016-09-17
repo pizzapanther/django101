@@ -9,6 +9,11 @@ This is the Homepage!
 {% endblock header %}
 
 {% block content %}
+<form method="GET">
+    <input name="search" value="{{ search }}">
+    <input type="submit" value="Search">
+</form>
+<hr>
 <ul>
     {% for thing in things %}
     <li>

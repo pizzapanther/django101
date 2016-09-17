@@ -12,7 +12,8 @@ def homepage (request):
         things = Thing.objects.all().order_by('name')
         
     context = {
-        'things': things
+        'things': things,
+        'search': search,
     }
     
     return TemplateResponse(request, 'index.html', context)
