@@ -1,0 +1,20 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>
+            {% block title %}
+            Hello Web App
+            {% endblock title %}
+        </title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <h1>
+            {% block header %}
+            Hello World!
+            {% endblock header %}
+        </h1>
+        {% block content %}{% endblock %}
+    </body>
+</html>

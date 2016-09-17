@@ -1,11 +1,15 @@
-<!doctype html>
-{% load staticfiles %}
-<html>
-    <head>
-        <title>Hello World</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block header %}
+This is the Homepage!
+{% endblock header %}
+
+{% block content %}
+<p>
+    This is some content.
+</p>
+{% endblock content %}
