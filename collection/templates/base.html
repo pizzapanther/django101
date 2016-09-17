@@ -10,6 +10,11 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
+        <div class="navigation">
+            <a href="{% url "homepage" %}">Homepage</a> - 
+            <a href="{% url "page_view" "about.html" %}">About Us</a> - 
+            <a href="{% url "page_view" "contact.html" %}">Contact Info</a>
+        </div>
         <h1>
             {% block header %}
             Hello World!

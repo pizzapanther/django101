@@ -21,6 +21,6 @@ from collection.views import homepage, page_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('pages/(\S+.html)', page_view),
-    url('^$', homepage),
+    url('narf/(\S+.html)', page_view, name="page_view"),
+    url('^$', homepage, name="homepage"),
 ]
