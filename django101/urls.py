@@ -17,10 +17,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from collection.views import homepage, page_view
+from collection.views import homepage, page_view, detail_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('narf/(\S+.html)', page_view, name="page_view"),
+    url('things/(\S+)', detail_view, name="detail_view"),
     url('^$', homepage, name="homepage"),
 ]

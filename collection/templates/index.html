@@ -17,7 +17,9 @@ This is the Homepage!
 <ul>
     {% for thing in things %}
     <li>
-        <h2>{{ thing.name }}</h2>
+        <h2>
+            <a href="{% url "detail_view" thing.slug %}">{{ thing.name }}</a>
+        </h2>
         <p>
             {{ thing.description }}
         </p>
