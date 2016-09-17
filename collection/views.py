@@ -1,11 +1,12 @@
 from django.template.response import TemplateResponse
 
+from collection.models import Thing
+
 def homepage (request):
-    num = int(request.GET.get('num', '6'))
+    things = Thing.objects.all()
     
     context = {
-        'num': num,
-        'name': 'Paul edkjhfasjhfjasdhfjsahfjsahdfjh',
+        'things': things
     }
     
     return TemplateResponse(request, 'index.html', context)

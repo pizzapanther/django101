@@ -5,6 +5,7 @@ from collection.models import Thing
 @admin.register(Thing)
 class ThingAdmin (admin.ModelAdmin):
     list_display = ('name', 'slug', 'Description')
+    search_fields = ['name']
     prepopulated_fields = {'slug': ('name',)}
     
     def Description (self, obj):

@@ -9,18 +9,14 @@ This is the Homepage!
 {% endblock header %}
 
 {% block content %}
-<p>
-    {% if num == 6 %}
-    You are a winner!
-    {% else %}
-    You are a loser
-    {% endif %}
-    <br>
-    You have {{ num }} thing{{ num | pluralize }}
-    <br>
-    {{ name | truncatechars:10 }}
-</p>
-<p>
-    This is some content.
-</p>
+<ul>
+    {% for thing in things %}
+    <li>
+        <h2>{{ thing.name }}</h2>
+        <p>
+            {{ thing.description }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock content %}
