@@ -1,8 +1,11 @@
 from django.template.response import TemplateResponse
 
 def homepage (request):
+    num = int(request.GET.get('num', '6'))
+    
     context = {
-        'n': 6
+        'num': num,
+        'name': 'Paul edkjhfasjhfjasdhfjsahfjsahdfjh',
     }
     
     return TemplateResponse(request, 'index.html', context)

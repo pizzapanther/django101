@@ -10,7 +10,15 @@ This is the Homepage!
 
 {% block content %}
 <p>
-    The number is {{ n }}
+    {% if num == 6 %}
+    You are a winner!
+    {% else %}
+    You are a loser
+    {% endif %}
+    <br>
+    You have {{ num }} thing{{ num | pluralize }}
+    <br>
+    {{ name | truncatechars:10 }}
 </p>
 <p>
     This is some content.
